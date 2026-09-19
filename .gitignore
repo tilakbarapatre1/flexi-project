@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+leave_automation.db
+.env
+.venv/
