@@ -1,3 +1,14 @@
+---
+title: Employee Leave Automation
+emoji: 🏢
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+sdk_version: 5.20.1
+app_file: app.py
+pinned: false
+---
+
 # Employee Leave Automation
 
 A modern, Python-based employee attendance and leave management system featuring an **AI-assisted Leave Recommendation Agent**.
@@ -118,7 +129,7 @@ The application automatically initializes the SQLite database with safe demo acc
 employee_leave_automation/
 ├── app.py                     # Main application entry point & AI Agent engine
 ├── requirements.txt           # Python package dependencies
-├── README.md                  # Project documentation & guide
+├── README.md                  # Project documentation & Hugging Face metadata
 ├── .gitignore                 # Files excluded from version control
 ├── backend/
 │   ├── __init__.py
