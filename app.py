@@ -629,6 +629,14 @@ with gr.Blocks(title="AI Employee Leave Automation", css=SAAS_THEME_CSS, theme=g
         ]
     )
 
+# Create FastAPI application and mount Gradio app for Vercel / ASGI serverless deployment
+from fastapi import FastAPI
+
+fastapi_app = FastAPI(title="AI Employee Leave Automation")
+app = gr.mount_gradio_app(fastapi_app, demo, path="/")
+handler = app
+
 if __name__ == "__main__":
     demo.launch(server_name="0.0.0.0", server_port=7860)
+
 
