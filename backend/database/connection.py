@@ -1,8 +1,8 @@
 import os
 import sqlite3
 
-# Define database path (uses /tmp on Vercel to allow writes in serverless environment)
-if os.environ.get("VERCEL") == "1":
+# Define database path (uses /tmp in Vercel/serverless environments to allow writes)
+if os.environ.get("VERCEL") == "1" or os.environ.get("VERCEL_ENV") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
     DB_PATH = "/tmp/leave_automation.db"
 else:
     PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
