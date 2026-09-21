@@ -630,4 +630,5 @@ with gr.Blocks(title="AI Employee Leave Automation", css=SAAS_THEME_CSS, theme=g
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(server_name="0.0.0.0", server_port=7860)
+
